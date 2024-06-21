@@ -1,0 +1,33 @@
+* {
+    text-align: center;
+    font-family: Arial, monospace;
+}
+
+html {
+    background-color: wheat;
+    font-size: 16px;
+}
+
+body {
+    width: 640px;
+    /* 너비의 남은 여백을 동일하게 분배한다 */
+    margin: auto;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+}
+
+p {
+    font-size: 1.5rem;
+}

@@ -1,6 +1,11 @@
 import os
 from PIL import Image, ImageDraw
 
+"""
+본 프로젝트에서는 활용하지 않는 기능 및 파일입니다.
+"""
+
+
 # 디렉토리 생성
 output_dir = './resources/imgs'
 os.makedirs(output_dir, exist_ok=True)

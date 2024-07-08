@@ -75,7 +75,10 @@ class BankingService:
 
             elif mode == "거래내역확인":
                 transactions = user.account.get_transactions()
-                print(transactions)
+
+                print(f"{username}님의 거래 내역입니다.")
+                for transaction in transactions:
+                    print(transaction)
 
             else:
                 print("일치하는 모드가 없습니다. 다시 입력해주세요")

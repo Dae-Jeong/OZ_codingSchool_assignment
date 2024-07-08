@@ -37,6 +37,8 @@ class Account:
             amount=amount
         )
 
+        print(f"입금이 완료되었습니다. 현재 잔액은 {self.get_balance()}원 입니다.")
+
     def withdraw(self, amount: int) -> None:
         """
         계좌 잔고에 돈을 출금하는 메서드
@@ -60,6 +62,7 @@ class Account:
             transaction_type="출금",
             amount=amount
         )
+        print(f"출금이 완료되었습니다. 현재 잔액은 {self.get_balance()}원 입니다.")
 
     def get_balance(self) -> int:
         """

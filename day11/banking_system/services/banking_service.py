@@ -1,5 +1,5 @@
 from models.user import User
-from utils.exceptions import UserNotFoundError, NegativeAmountError, InsufficientFundsError
+from utils.exceptions import UserNotFoundError
 from utils.input import input_int
 
 
@@ -62,12 +62,13 @@ class BankingService:
                         print(e)
 
             elif mode == "출금":
-                amount = input_int(f"출금하실 금액을 정수로 입력하세요 [잔고 : {user.account.get_balance()}원] : ")
-                try:
-                    user.account.withdraw(amount=amount)
-                    break
-                except Exception as e:
-                    print(e)
+                while True:
+                    amount = input_int(f"출금하실 금액을 정수로 입력하세요 [잔고 : {user.account.get_balance()}원] : ")
+                    try:
+                        user.account.withdraw(amount=amount)
+                        break
+                    except Exception as e:
+                        print(e)
 
             elif mode == "잔고확인":
                 print(f"{username}님의 잔고는 {user.account.get_balance()}원 입니다.")

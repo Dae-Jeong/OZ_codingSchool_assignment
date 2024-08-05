@@ -24,7 +24,7 @@
             while (monsterHP > 0) {
                 monsterHP -= attackDamage
 
-                // Case 1. 바로 monsterHP를 연산해서 활용할 경우
+                // 과제 Case 1. 바로 monsterHP를 연산해서 활용할 경우
                 if (monsterHP < 0) {
                     monsterHP = 0
                 }
@@ -39,7 +39,7 @@
                 strong.textContent = `몬스터의 남은 HP는 ${monsterHP}입니다!`
                 container.append(strong)
 
-                // Case 2. 다음 연산을 예측하여 적용할 경우
+                // 과제 Case 2. 다음 연산을 예측하여 적용할 경우
                 // if (monsterHP < attackDamage) {
                 //     attackDamage = monsterHP
                 // }
